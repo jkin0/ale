@@ -18,13 +18,15 @@ Ale is a small cross-platform zero-dependency build tool written in C, just for 
 
 Here is an example build process:
 
+> You can find this example at [tests/build.c](./tests/build.c)
+
 ```c
 #include "ale.h"
 
 #define CC          "gcc"
 #define CFLAGS      "-Wall"
 #define OUTNAME     "example.out"
-#define SRCS        ale_find_all_by_ext("./", "c") // find all C files in current directory
+#define SRCS        ale_find_all_by_ext("src", "c") // find all C files in current directory
 
 int main(void) {
     ale_cmd(5, CC, CFLAGS, "-o", OUTNAME, SRCS);
