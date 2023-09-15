@@ -1,6 +1,6 @@
 # ale
 
-Cross-platform zero-dependency build tool in C.
+Cross-platform zero-dependency build tool in pure C.
 
 ## About
 
