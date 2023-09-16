@@ -112,7 +112,7 @@ char *ale_find_all_by_ext(char *dir, char *ext) {
 
             assert(file_ext != NULL);
             if (strcmp(file_ext, ext) == 0) {
-                wanted = (char *)realloc(wanted, (strlen(wanted) + strlen(tok) + 1) * sizeof(char));
+                wanted = (char *)realloc(wanted, (strlen(wanted) + strlen(tok) + 2) * sizeof(char));
                 if (cnt == 0)
                     strcpy(wanted, tok);
                 else {
