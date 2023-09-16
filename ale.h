@@ -1,3 +1,7 @@
+/*
+ * ale.h - A zero-dependency build system in pure C.
+ * MIT Copyright (c) 2023 Joshua Kinder
+ */
 #ifndef ALE_H
 #define ALE_H
 
