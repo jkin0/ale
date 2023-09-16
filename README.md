@@ -50,6 +50,8 @@ $ ./build
 
 Here are the functions that come premade:
 
+```ale_cmd(size_t n, ...)``` - Append each string passed, ```n``` is the argument count
+
 ```ale_find_all(char *dir)``` - Find all files in the specified directory, not including subdirectories
 
 ```ale_find_all_by_ext(char *dir, char *ext)``` - Find all files in the specified directory with the specified extension
