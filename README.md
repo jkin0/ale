@@ -60,6 +60,8 @@ Here are the functions that come premade:
 
 ```ale_set_noverbose()``` - DO NOT print each command before executing
 
+```ale_file_exists(char *name)``` - Search for the specified file, return 1 if it exists, return 0 if not
+
 ## License
 
 [MIT License](./LICENSE).

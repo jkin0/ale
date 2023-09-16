@@ -140,4 +140,12 @@ void ale_set_noverbose() {
     verbose = 0;
 }
 
+int ale_file_exists(char *name) {
+    FILE *fp = fopen(name, "r");
+    if (fp == NULL)
+        return 0;
+    fclose(fp);
+    return 1;
+}
+
 #endif
