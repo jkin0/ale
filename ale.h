@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <assert.h>
+#include <dirent.h>
 
 int verbose = 1;
 
@@ -46,34 +47,6 @@ char *ale_find_all(char *dir) {
     else
         strcpy(dir_cpy, dir);
 
-#ifdef _WIN32
-#include <windows.h>
-    WIN32_FIND_DATA FindFileData;
-    HANDLE hFind;
-
-    hFind = FindFirstFile(dir, &FindFileData);
-    if (hFind == INVALID_HANDLE_VALUE) {
-        fprintf(stderr, "error: ale_find_all(): FindFirstFile failed (%d)\n", GetLastError());
-        exit(EXIT_FAILURE);
-    } 
-    else {
-        do {
-            all = (char *)realloc(all, (strlen(all) + strlen(dir_cpy) + strlen(FindFileData.cFileName) + 2) * sizeof(char));
-            if (cnt == 0) {
-                sprintf(all, "%s%s", dir_cpy, FindFileData.cFileName);
-            }
-            else {
-                strcat(all, " ");
-                strcat(all, dir_cpy);
-                strcat(all, FindFileData.cFileName);
-            }
-            cnt++;
-        } while (FindNextFile(hFind, &FindFileData) != 0);
-
-        FindClose(hFind);
-    }
-#else
-#include <dirent.h>
     DIR *d;
     struct dirent *diren;
     d = opendir(dir);
@@ -98,7 +71,7 @@ char *ale_find_all(char *dir) {
         fprintf(stderr, "error: ale_find_all(): unknown directory '%s'\n", dir);
         exit(EXIT_FAILURE);
     }
-#endif 
+
     free(dir_cpy);
     return all;
 }
