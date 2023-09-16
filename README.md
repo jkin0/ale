@@ -1,10 +1,10 @@
 # ale
 
-Cross-platform zero-dependency build tool in pure C.
+Zero-dependency build tool in pure C.
 
 ## About
 
-Ale is a small cross-platform zero-dependency build tool written in C, just for fun. All you will need is a C compiler for building your projects with this tool, no more make and cmake. It is called Ale because I would frequently mistype 'make' as 'ale', now I couldn't think of a more suitable name for a build tool.
+Ale is a small zero-dependency build tool written in C, just for fun. All you will need is a C compiler for building your projects with this tool, no more make and cmake. It is called Ale because I would frequently mistype 'make' as 'ale', now I couldn't think of a more suitable name for a build tool.
 
 ## Usage
 
