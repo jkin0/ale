@@ -116,9 +116,9 @@ Here are the functions that come premade:
 
 ```void ale_cmd(size_t n, ...)``` - Append each string passed, ```n``` is the argument count
 
-```char *ale_find_all(char *dir)``` - Find all files in the specified directory, not including subdirectories
+```char *ale_find_all(char *dir)``` - Find all files in the specified directory, not including subdirectories, also **creates a collection of the found files**
 
-```char *ale_find_all_by_ext(char *dir, char *ext)``` - Find all files in the specified directory with the specified extension
+```char *ale_find_all_by_ext(char *dir, char *ext)``` - Find all files in the specified directory with the specified extension, also **creates a collection of the found files**
 
 ```void ale_set_verbose(int level)``` - (```ALE_VERBOSE_ALL``` by default) Tweak how many commands are printed before executing, ```ALE_VERBOSE_ALL``` prints all commands, ```ALE_VERBOSE_LESS``` prints most commands, ```ALE_VERBOSE_NONE``` doesn't print any
 
@@ -135,6 +135,10 @@ Here are the functions that come premade:
 ```char *ale_move_file_to_dir(char *file, char *dir, int move_file)``` - Return the new path of the file after moved, if ```move_file``` is 1, move the file to the directory
 
 ```void ale_move_file(char *file, char *path)``` - Move the specified file to the specified directory
+
+```size_t ale_collect_size()``` - Return the size of the collection
+
+```char *ale_next_in_collect()``` - Return the next file in the collection
 
 ## License
 

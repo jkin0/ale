@@ -68,9 +68,6 @@ char *ale_next_in_collect() {
     return collection[cur_collection_i++];
 }
 
-void _ale_system(size_t n, ...) {
-}
-
 void ale_cmd(size_t n, ...) {
     va_list vl;
     va_start(vl, n);
