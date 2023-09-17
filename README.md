@@ -114,27 +114,27 @@ int main(int argc, char **argv) {
 
 Here are the functions that come premade:
 
-```void ale_cmd(size_t n, ...)``` - Append each string passed, ```n``` is the argument count
+- ```void ale_cmd(size_t n, ...)``` - Append each string passed, ```n``` is the argument count
 
-```char *ale_find_all(char *dir)``` - Find all files in the specified directory, not including subdirectories
+- ```char *ale_find_all(char *dir)``` - Find all files in the specified directory, not including subdirectories
 
-```char *ale_find_all_by_ext(char *dir, char *ext)``` - Find all files in the specified directory with the specified extension
+- ```char *ale_find_all_by_ext(char *dir, char *ext)``` - Find all files in the specified directory with the specified extension
 
-```void ale_set_verbose(int level)``` - (```ALE_VERBOSE_ALL``` by default) Tweak how many commands are printed before executing, ```ALE_VERBOSE_ALL``` prints all commands, ```ALE_VERBOSE_LESS``` prints most commands, ```ALE_VERBOSE_NONE``` doesn't print any
+- ```void ale_set_verbose(int level)``` - (```ALE_VERBOSE_ALL``` by default) Tweak how many commands are printed before executing, ```ALE_VERBOSE_ALL``` prints all commands, ```ALE_VERBOSE_LESS``` prints most commands, ```ALE_VERBOSE_NONE``` doesn't print any
 
-```int ale_file_exists(char *name)``` - Search for the specified file, return 1 if it exists, return 0 if not
+- ```int ale_file_exists(char *name)``` - Search for the specified file, return 1 if it exists, return 0 if not
 
-```size_t ale_count_files(char *dir)``` - Return the count of files in the specified directory
+- ```size_t ale_count_files(char *dir)``` - Return the count of files in the specified directory
 
-```size_t ale_count_file_by_ext(char *dir)``` - Return the count of files that have the specified extension in the specified directory
+- ```size_t ale_count_file_by_ext(char *dir)``` - Return the count of files that have the specified extension in the specified directory
 
-```void ale_copy_file(char *filename, char *dst_name)``` - Copy the specified file and call it ```dst_name```
+- ```void ale_copy_file(char *filename, char *dst_name)``` - Copy the specified file and call it ```dst_name```
 
-```char *ale_change_filetype(char *filename, char *new_type, int rename_file)``` - Return the filename with the new extension, if ```rename_file``` is 1, change the filetype of the specified file to the specified new type
+- ```char *ale_change_filetype(char *filename, char *new_type, int rename_file)``` - Return the filename with the new extension, if ```rename_file``` is 1, change the filetype of the specified file to the specified new type
 
-```char *ale_move_file_to_dir(char *file, char *dir, int move_file)``` - Return the new path of the file after moved, if ```move_file``` is 1, move the file to the directory
+- ```char *ale_move_file_to_dir(char *file, char *dir, int move_file)``` - Return the new path of the file after moved, if ```move_file``` is 1, move the file to the directory
 
-```void ale_move_file(char *file, char *path)``` - Move the specified file to the specified directory
+- ```void ale_move_file(char *file, char *path)``` - Move the specified file to the specified directory
 
 ## License
 
