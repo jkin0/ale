@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "a_header.h"
 
 int main(void) {
-    printf("Hello world!\n");
+    do_header_func();
     return 0;
 }
